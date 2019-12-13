@@ -231,14 +231,13 @@ client.urgent                   $red            $red            $black          
 workspace_auto_back_and_forth yes
 popup_during_fullscreen smart
 focus_follows_mouse yes 
-for_window [class=.*] border pixel 2 
+for_window [class=.*] border pixel 3
 
 #########################################################
                   #Startup apps 
 #########################################################
 exec_always --no-startup-id ~/.fehbg 
 bindsym $mod+p exec ~/.fehbg
-exec xinput set-prop 12 276 1
 exec --no-startup-id $HOME/.local/bin/barstart
 #exec --no-startup-id compton -b --config $HOME/.compton.conf
 
@@ -283,12 +282,13 @@ exec --no-startup-id $HOME/.local/bin/barstart
         bindsym fn+Down exec amixer -q -D default sset Master 5%- unmute
 # Run Application
 
-        bindsym $mod+d exec rofi -show drun -width 24 -lines 7 -columns 1 r-bw 0 -location 8            # rofi
+        bindsym $mod+d exec rofi -show drun -width 30 -lines 10 -columns 1 r-bw 0 -location 0            # rofi
         bindsym $mod+Return exec i3-sensible-terminal                                                   # terminal
         bindsym $mod+c  exec "/home/reversedog/Documents/cheat.sh"                                      # cheatsheet       
         bindsym $mod+alt+delete exec ~/dotfiles/rofi/shutdown_menu.sh                                   # shutdown script
-        bindsym F12 exec tilix -q                                                                       # tillix dropdown terminal
-        bindsym $mod+u exec i3lock -i $HOME/Pictures/Wallpapers/nick-baker-98364-unsplash.png -e -f      # i3lock
+        bindsym Alt+q exec tilix -q                                                                       # tillix dropdown terminal
+        bindsym $mod+u exec i3lock -u -i ~/Pictures/MOSHED-2019-12-13-15-19-27.png -e -f            # i3lock
+        
         #bindsym $mod+n exec notes floating make a fucking shortcut for fast notes                      # Notes
 
 
